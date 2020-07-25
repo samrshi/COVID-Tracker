@@ -35,13 +35,15 @@ struct HomeView: View {
                     }
                     
                     HStack {
-                        GraphView(title: "United States", data: self.historicCountry.positiveOverAllDate, colorScheme: .cool)
+                        LineGraphView(title: "United States", data: self.historicCountry.positiveOverAllDate, colorScheme: .cool)
                             .frame(height: 142)
                         
-                        GraphView(title: stateMap[userSettings.favoriteState] ?? userSettings.favoriteState, data: self.historicStates.positiveOverDates(forState: userSettings.favoriteState), colorScheme: .warm)
+                        LineGraphView(title: stateMap[userSettings.favoriteState] ?? userSettings.favoriteState, data: self.historicStates.positiveOverDates(forState: userSettings.favoriteState), colorScheme: .warm)
                             .frame(height: 142)
                     }
                     .padding(.horizontal, 10)
+                    
+                    RectangleCard().environmentObject(historicCountry)
                 }
             }
             .navigationBarTitle("COVID-19")
@@ -49,11 +51,11 @@ struct HomeView: View {
                 self.historicCountry.loadData()
                 self.historicStates.loadData()
             })
-            .sheet(isPresented: $showSheet, content: {
-                StatePickerView()
-                    .environmentObject(self.userSettings)
-                    .environmentObject(self.historicStates)
-            })
+                .sheet(isPresented: $showSheet, content: {
+                    StatePickerView()
+                        .environmentObject(self.userSettings)
+                        .environmentObject(self.historicStates)
+                })
         }
     }
     

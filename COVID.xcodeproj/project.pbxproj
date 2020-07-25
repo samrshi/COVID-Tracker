@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD2F9A7F24CC045E0043C11D /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A7E24CC045E0043C11D /* RectangleChartView.swift */; };
+		BD2F9A8224CC04C10043C11D /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8124CC04C10043C11D /* PieChartCell.swift */; };
+		BD2F9A8424CC052E0043C11D /* RectangleChartSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8324CC052E0043C11D /* RectangleChartSegment.swift */; };
+		BD2F9A8624CC0F940043C11D /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8524CC0F940043C11D /* RectangleCard.swift */; };
 		BD32FB2C24C890BF0020AB73 /* PieChartTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */; };
 		BD364CBD24C415A500419F34 /* IndicatorRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */; };
 		BD364CBF24C41D9D00419F34 /* WarningCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD364CBE24C41D9D00419F34 /* WarningCard.swift */; };
@@ -22,7 +26,7 @@
 		BDAD30A524C2A81C00C741D1 /* PercentChangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30A424C2A81C00C741D1 /* PercentChangeView.swift */; };
 		BDAD30A724C2A85D00C741D1 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30A624C2A85D00C741D1 /* LabelView.swift */; };
 		BDAD30A924C2A8E900C741D1 /* DataGroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30A824C2A8E900C741D1 /* DataGroupView.swift */; };
-		BDAD30AB24C342F100C741D1 /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30AA24C342F100C741D1 /* GraphView.swift */; };
+		BDAD30AB24C342F100C741D1 /* LineGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30AA24C342F100C741D1 /* LineGraphView.swift */; };
 		BDAD30B124C4048900C741D1 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAD30B024C4048900C741D1 /* Line.swift */; };
 		BDB9FF3E24B58B8F0062D71B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9FF3D24B58B8F0062D71B /* AppDelegate.swift */; };
 		BDB9FF4024B58B8F0062D71B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB9FF3F24B58B8F0062D71B /* SceneDelegate.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD2F9A7E24CC045E0043C11D /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
+		BD2F9A8124CC04C10043C11D /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		BD2F9A8324CC052E0043C11D /* RectangleChartSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartSegment.swift; sourceTree = "<group>"; };
+		BD2F9A8524CC0F940043C11D /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
 		BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTest.swift; sourceTree = "<group>"; };
 		BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorRectangle.swift; sourceTree = "<group>"; };
 		BD364CBE24C41D9D00419F34 /* WarningCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningCard.swift; sourceTree = "<group>"; };
@@ -52,7 +60,7 @@
 		BDAD30A424C2A81C00C741D1 /* PercentChangeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentChangeView.swift; sourceTree = "<group>"; };
 		BDAD30A624C2A85D00C741D1 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 		BDAD30A824C2A8E900C741D1 /* DataGroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataGroupView.swift; sourceTree = "<group>"; };
-		BDAD30AA24C342F100C741D1 /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		BDAD30AA24C342F100C741D1 /* LineGraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineGraphView.swift; sourceTree = "<group>"; };
 		BDAD30B024C4048900C741D1 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		BDB9FF3A24B58B8F0062D71B /* COVID.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = COVID.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB9FF3D24B58B8F0062D71B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +87,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD2F9A7C24CC03DB0043C11D /* LineGraph */ = {
+			isa = PBXGroup;
+			children = (
+				BDAD30AA24C342F100C741D1 /* LineGraphView.swift */,
+				BDAD30B024C4048900C741D1 /* Line.swift */,
+				BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */,
+				BD364CC024C571D700419F34 /* IndicatorPoint.swift */,
+			);
+			path = LineGraph;
+			sourceTree = "<group>";
+		};
+		BD2F9A7D24CC04020043C11D /* RectangleChart */ = {
+			isa = PBXGroup;
+			children = (
+				BD2F9A8524CC0F940043C11D /* RectangleCard.swift */,
+				BD2F9A7E24CC045E0043C11D /* RectangleChartView.swift */,
+				BD2F9A8324CC052E0043C11D /* RectangleChartSegment.swift */,
+			);
+			path = RectangleChart;
+			sourceTree = "<group>";
+		};
+		BD2F9A8024CC04750043C11D /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */,
+				BD2F9A8124CC04C10043C11D /* PieChartCell.swift */,
+			);
+			path = PieChart;
+			sourceTree = "<group>";
+		};
 		BD40729824B8C0D2007360B4 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,7 +146,7 @@
 				BD3CC73F24C5F345004CD7A6 /* ViewExtensions.swift */,
 				BDAD30B224C404B000C741D1 /* Cards */,
 				BDAD30B324C404C600C741D1 /* DataGroup */,
-				BDAD30B424C4056B00C741D1 /* Graph */,
+				BDAD30B424C4056B00C741D1 /* Graphs */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -133,16 +171,14 @@
 			path = DataGroup;
 			sourceTree = "<group>";
 		};
-		BDAD30B424C4056B00C741D1 /* Graph */ = {
+		BDAD30B424C4056B00C741D1 /* Graphs */ = {
 			isa = PBXGroup;
 			children = (
-				BDAD30AA24C342F100C741D1 /* GraphView.swift */,
-				BDAD30B024C4048900C741D1 /* Line.swift */,
-				BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */,
-				BD364CC024C571D700419F34 /* IndicatorPoint.swift */,
-				BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */,
+				BD2F9A7D24CC04020043C11D /* RectangleChart */,
+				BD2F9A7C24CC03DB0043C11D /* LineGraph */,
+				BD2F9A8024CC04750043C11D /* PieChart */,
 			);
-			path = Graph;
+			path = Graphs;
 			sourceTree = "<group>";
 		};
 		BDB9FF3124B58B8F0062D71B = {
@@ -267,7 +303,8 @@
 				BDAD30A924C2A8E900C741D1 /* DataGroupView.swift in Sources */,
 				BD5C088F24C1652F00EE2F98 /* StateModel.swift in Sources */,
 				BD364CC124C571D700419F34 /* IndicatorPoint.swift in Sources */,
-				BDAD30AB24C342F100C741D1 /* GraphView.swift in Sources */,
+				BD2F9A8224CC04C10043C11D /* PieChartCell.swift in Sources */,
+				BDAD30AB24C342F100C741D1 /* LineGraphView.swift in Sources */,
 				BD71F8F924C5E4BA000766ED /* StateView.swift in Sources */,
 				BDAD30A524C2A81C00C741D1 /* PercentChangeView.swift in Sources */,
 				BDF8F9DA24C1FB6900DF2B28 /* HistoricCountryViewModel.swift in Sources */,
@@ -275,7 +312,10 @@
 				BDAD309924C20D7400C741D1 /* HistoricalStatesViewModel.swift in Sources */,
 				BDAD30B124C4048900C741D1 /* Line.swift in Sources */,
 				BDB9FF3E24B58B8F0062D71B /* AppDelegate.swift in Sources */,
+				BD2F9A7F24CC045E0043C11D /* RectangleChartView.swift in Sources */,
+				BD2F9A8624CC0F940043C11D /* RectangleCard.swift in Sources */,
 				BD32FB2C24C890BF0020AB73 /* PieChartTest.swift in Sources */,
+				BD2F9A8424CC052E0043C11D /* RectangleChartSegment.swift in Sources */,
 				BDAD30A724C2A85D00C741D1 /* LabelView.swift in Sources */,
 				BDB9FF4024B58B8F0062D71B /* SceneDelegate.swift in Sources */,
 				BDBAA4CA24C92CA600FB26A0 /* StatePickerView.swift in Sources */,

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct GraphView: View {
+struct LineGraphView: View {
     let title: String
     let data: [(date: String, positive: Int)]
     let colorScheme: GraphStyle
@@ -114,7 +114,7 @@ struct GraphView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color("background")
-            GraphView(title: "Deaths", data: [(date: "20", positive: 1)], colorScheme: .cool)
+            LineGraphView(title: "Deaths", data: [(date: "20", positive: 1)], colorScheme: .cool)
         }
     }
 }
