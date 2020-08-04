@@ -10,15 +10,10 @@ import SwiftUI
 
 struct IndicatorPoint: View {
     var body: some View {
-        ZStack {
-            Circle()
-                .foregroundColor(Color("primary"))
-            Circle()
-                .foregroundColor(.white)
-                .frame(width: 7, height: 7)
-        }
-        .frame(width: 14, height: 14)
-        .shadow(radius: 5)
+        Circle()
+            .foregroundColor(.white)
+            .frame(width: 10, height: 10)
+            .shadow(radius: 5)
     }
 }
 

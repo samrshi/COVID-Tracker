@@ -48,8 +48,8 @@ struct HomeView: View {
             }
             .navigationBarTitle("COVID-19")
             .navigationBarItems(trailing: Button("Refresh") {
-                self.historicCountry.loadData()
-                self.historicStates.loadData()
+//                self.historicCountry.loadData()
+//                self.historicStates.loadData()
             })
                 .sheet(isPresented: $showSheet, content: {
                     StatePickerView()

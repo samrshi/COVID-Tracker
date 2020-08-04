@@ -14,6 +14,10 @@ struct ContentView: View {
     @ObservedObject var historicStates = HistoricalStatesViewModel()
     @ObservedObject var userSettings = UserSettings()
     
+    @State private var showAlert = false
+    @State private var alertTitle = ""
+    @State private var alertMessage = ""
+    
     var body: some View {
         TabView {
             HomeView()
@@ -26,9 +30,39 @@ struct ContentView: View {
                 .environmentObject(historicStates)
                 .tabItem({Image(systemName: "location")})
         }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text(alertTitle), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+        }
         .onAppear {
-            self.historicCountry.loadData()
-            self.historicStates.loadData()
+            self.historicCountry.fetchData(completion: self.handleResponse)
+            self.historicStates.loadData(completion: self.handleResponse)
+        }
+    }
+    
+    func handleResponse(result: (message: String, result: Result<String, NetworkError>)) -> Void {
+        switch result.result {
+        case .success(_):
+            // do nothing
+            break
+        case .failure(let error):
+            switch error {
+            case .badURL:
+                self.alertTitle = "Bad URL"
+                self.alertMessage = result.message
+                self.showAlert = true
+            case .requestFailed:
+                self.alertTitle = "Network problems"
+                self.alertMessage = result.message
+                self.showAlert = true
+            case .unknown:
+                self.alertTitle = "Unknown error"
+                self.alertMessage = result.message
+                self.showAlert = true
+            case .invalidHTTPCode:
+                self.alertTitle = "Invalid HTTP Request Code"
+                self.alertMessage = result.message
+                self.showAlert = true
+            }
         }
     }
 }

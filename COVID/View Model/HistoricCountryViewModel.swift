@@ -8,6 +8,10 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case badURL, requestFailed, invalidHTTPCode, unknown
+}
+
 class HistoricCountryViewModel: ObservableObject {
     @Published var historicData: [CountryModel] = []
     @Published var positiveOverAllDate = [(date: String, positive: Int)]()
@@ -15,18 +19,20 @@ class HistoricCountryViewModel: ObservableObject {
     static let url = "https://covidtracking.com/api/v1/us/daily.json"
     // "https://covidtracking.com/api/v1/us/daily.json"
     
-    func loadData() {
+    func fetchData(completion: @escaping ((message: String, result: Result<String, NetworkError>)) -> Void) {
         historicData = []
         positiveOverAllDate = []
         
         guard let url = URL(string: HistoricCountryViewModel.self.url) else {
             print("Invalid URL")
+            completion((message: "Invalid URL", result: .failure(.badURL)))
             return
         }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
+                completion((message: error.localizedDescription, result: .failure(.requestFailed)))
                 return
             }
             
@@ -42,12 +48,15 @@ class HistoricCountryViewModel: ObservableObject {
                                 (date: date.formattedDate, positive: date.positive ?? 0)
                             )
                         }
+                        completion((message: "Data fetched", result: .success("Success")))
                     } catch let err {
                         print(err)
+                        completion((message: err.localizedDescription, result: .failure(.unknown)))
                     }
                 }
             } else {
-                print("HTTPURLResponse code: \(response.statusCode)")
+                print("HTTPRequest Code: \(response.statusCode)")
+                completion((message: "HTTPRequest Code: \(response.statusCode)", result: .failure(.invalidHTTPCode)))
             }
         }.resume()
     }

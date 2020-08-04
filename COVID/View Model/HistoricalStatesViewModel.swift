@@ -27,18 +27,20 @@ class HistoricalStatesViewModel: ObservableObject {
     static let url = "https://covidtracking.com/api/v1/states/daily.json"
     // https://covidtracking.com/api/v1/states/daily.json
     
-    func loadData() {
+    func loadData(completion: @escaping ((message: String, result: Result<String, NetworkError>)) -> Void) {
         states = [String : [StateModel]]()
         statesArray = [emptyState]
         
         guard let url = URL(string: HistoricalStatesViewModel.url) else {
             print("Invalid URL")
+            completion((message: "Invalid URL", result: .failure(.badURL)))
             return
         }
                 
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
+                completion((message: error.localizedDescription, result: .failure(.requestFailed)))
                 return
             }
                         
@@ -61,12 +63,15 @@ class HistoricalStatesViewModel: ObservableObject {
                                 self.statesArray.append(stateOnDate)
                             }
                         }
+                        completion((message: "Data fetched", result: .success("Success")))
                     } catch let err {
                         print("Error: \(err)")
+                        completion((message: err.localizedDescription, result: .failure(.unknown)))
                     }
                 }
             } else {
                 print("HTTPURLResponse code: \(response.statusCode)")
+                completion((message: "HTTPRequest Code: \(response.statusCode)", result: .failure(.invalidHTTPCode)))
             }
         }.resume()
     }
