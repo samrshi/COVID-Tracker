@@ -75,6 +75,10 @@ struct GraphView: View {
     }
     
     func getClosestPositive(at: CGFloat, width: CGFloat) -> Int {
+        if data.isEmpty {
+            return -1
+        }
+        
         let stepWidth = width / CGFloat(data.count - 1)
         
         let x = Int(round((at)/stepWidth))
@@ -93,6 +97,10 @@ struct GraphView: View {
     }
     
     func getClosestDate(at: CGFloat, width: CGFloat) -> String {
+        if data.isEmpty {
+            return "Unknown"
+        }
+        
         let stepWidth = width / CGFloat(data.count - 1)
         
         let x = Int(round((at)/stepWidth))

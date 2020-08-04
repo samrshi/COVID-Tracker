@@ -102,6 +102,10 @@ struct Line: View {
         }
         
         var result: Double {
+            if data.isEmpty {
+                return -1
+            }
+            
             if touchLocation.x > width {
                 return Double(data[data.count - 1])
             } else if touchLocation.x < 0 {

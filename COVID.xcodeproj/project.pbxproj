@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
+=======
+		BD25F88D24D9089B003B20BA /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD25F88C24D9089B003B20BA /* CustomAlert.swift */; };
+		BD2F9A7F24CC045E0043C11D /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A7E24CC045E0043C11D /* RectangleChartView.swift */; };
+		BD2F9A8224CC04C10043C11D /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8124CC04C10043C11D /* PieChartCell.swift */; };
+		BD2F9A8424CC052E0043C11D /* RectangleChartSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8324CC052E0043C11D /* RectangleChartSegment.swift */; };
+		BD2F9A8624CC0F940043C11D /* RectangleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2F9A8524CC0F940043C11D /* RectangleCard.swift */; };
+>>>>>>> Stashed changes
 		BD32FB2C24C890BF0020AB73 /* PieChartTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */; };
 		BD364CBD24C415A500419F34 /* IndicatorRectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */; };
 		BD364CBF24C41D9D00419F34 /* WarningCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD364CBE24C41D9D00419F34 /* WarningCard.swift */; };
@@ -37,6 +45,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+<<<<<<< Updated upstream
+=======
+		BD25F88C24D9089B003B20BA /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		BD2F9A7E24CC045E0043C11D /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
+		BD2F9A8124CC04C10043C11D /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		BD2F9A8324CC052E0043C11D /* RectangleChartSegment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartSegment.swift; sourceTree = "<group>"; };
+		BD2F9A8524CC0F940043C11D /* RectangleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleCard.swift; sourceTree = "<group>"; };
+>>>>>>> Stashed changes
 		BD32FB2B24C890BF0020AB73 /* PieChartTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartTest.swift; sourceTree = "<group>"; };
 		BD364CBC24C415A500419F34 /* IndicatorRectangle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorRectangle.swift; sourceTree = "<group>"; };
 		BD364CBE24C41D9D00419F34 /* WarningCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningCard.swift; sourceTree = "<group>"; };
@@ -106,6 +122,7 @@
 				BD71F8F824C5E4BA000766ED /* StateView.swift */,
 				BDBAA4C924C92CA600FB26A0 /* StatePickerView.swift */,
 				BD3CC73F24C5F345004CD7A6 /* ViewExtensions.swift */,
+				BD25F88C24D9089B003B20BA /* CustomAlert.swift */,
 				BDAD30B224C404B000C741D1 /* Cards */,
 				BDAD30B324C404C600C741D1 /* DataGroup */,
 				BDAD30B424C4056B00C741D1 /* Graph */,
@@ -285,6 +302,7 @@
 				BD7AD4BE24C739E0000E0F07 /* Settings.swift in Sources */,
 				BD3CC74024C5F345004CD7A6 /* ViewExtensions.swift in Sources */,
 				BD364CBD24C415A500419F34 /* IndicatorRectangle.swift in Sources */,
+				BD25F88D24D9089B003B20BA /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
