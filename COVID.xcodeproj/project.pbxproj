@@ -21,6 +21,8 @@
 		BD364CC124C571D700419F34 /* IndicatorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD364CC024C571D700419F34 /* IndicatorPoint.swift */; };
 		BD3CC74024C5F345004CD7A6 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3CC73F24C5F345004CD7A6 /* ViewExtensions.swift */; };
 		BD5C088F24C1652F00EE2F98 /* StateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C088E24C1652F00EE2F98 /* StateModel.swift */; };
+		BD65326224EA07DB000E1637 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65326124EA07DB000E1637 /* API.swift */; };
+		BD65326424EA0AA8000E1637 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65326324EA0AA8000E1637 /* NetworkError.swift */; };
 		BD71F8F924C5E4BA000766ED /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71F8F824C5E4BA000766ED /* StateView.swift */; };
 		BD71F8FB24C5EE2D000766ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71F8FA24C5EE2D000766ED /* Home.swift */; };
 		BD7AD4BE24C739E0000E0F07 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7AD4BD24C739E0000E0F07 /* Settings.swift */; };
@@ -59,6 +61,8 @@
 		BD364CC024C571D700419F34 /* IndicatorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
 		BD3CC73F24C5F345004CD7A6 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		BD5C088E24C1652F00EE2F98 /* StateModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateModel.swift; sourceTree = "<group>"; };
+		BD65326124EA07DB000E1637 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		BD65326324EA0AA8000E1637 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		BD71F8F824C5E4BA000766ED /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
 		BD71F8FA24C5EE2D000766ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		BD7AD4BD24C739E0000E0F07 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -130,6 +134,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		BD65326024EA05A7000E1637 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD65326124EA07DB000E1637 /* API.swift */,
+				BD65326324EA0AA8000E1637 /* NetworkError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		BDAD30B224C404B000C741D1 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +196,7 @@
 			children = (
 				BDB9FF3D24B58B8F0062D71B /* AppDelegate.swift */,
 				BDB9FF3F24B58B8F0062D71B /* SceneDelegate.swift */,
+				BD65326024EA05A7000E1637 /* Networking */,
 				BD40729924B8C0DB007360B4 /* Model */,
 				BD40729A24B8C0E0007360B4 /* Views */,
 				BD40729824B8C0D2007360B4 /* View Model */,
@@ -280,11 +294,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB9FF5224B58BC40062D71B /* CountryModel.swift in Sources */,
+				BD65326424EA0AA8000E1637 /* NetworkError.swift in Sources */,
 				BDAD30A324C2A64900C741D1 /* StateCard.swift in Sources */,
 				BDAD30A924C2A8E900C741D1 /* DataGroupView.swift in Sources */,
 				BD5C088F24C1652F00EE2F98 /* StateModel.swift in Sources */,
 				BD364CC124C571D700419F34 /* IndicatorPoint.swift in Sources */,
+<<<<<<< Updated upstream
 				BDAD30AB24C342F100C741D1 /* GraphView.swift in Sources */,
+=======
+				BD2F9A8224CC04C10043C11D /* PieChartCell.swift in Sources */,
+				BD65326224EA07DB000E1637 /* API.swift in Sources */,
+				BDAD30AB24C342F100C741D1 /* LineGraphView.swift in Sources */,
+>>>>>>> Stashed changes
 				BD71F8F924C5E4BA000766ED /* StateView.swift in Sources */,
 				BDAD30A524C2A81C00C741D1 /* PercentChangeView.swift in Sources */,
 				BDF8F9DA24C1FB6900DF2B28 /* HistoricCountryViewModel.swift in Sources */,
