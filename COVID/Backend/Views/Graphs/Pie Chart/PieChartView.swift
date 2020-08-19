@@ -43,9 +43,6 @@ struct PieChartView: View {
             ZStack {
                 Circle()
                     .fill(Color.backgroundDark)
-                    .onTapGesture {
-                        self.displayValue.toggle()
-                }
                 
                 ForEach(0 ..< self.slices.count, id: \.self) { index in
                     PieChartCell(rect: geometry.frame(in: .local), startDeg: self.slices[index].startDeg, endDeg: self.slices[index].endDeg, color: Color.rgbArray[index])
@@ -54,10 +51,20 @@ struct PieChartView: View {
                 if self.displayValue {
                     VStack {
                         ForEach(0 ..< self.slices.count, id: \.self) { index in
-                            Text("\(self.titles[index]) \(Int(self.slices[index].normalizedValue * 100))%")
+                            HStack {
+                                Text("\(self.titles[index]) \(Int(self.slices[index].normalizedValue * 100))%")
+                                    .font(.caption)
+                                    .foregroundColor(Color.rgbArray[index])
+                            }
                         }
                     }
+                    .transition(.scale)
                 }
+            }
+            .onTapGesture {
+                    withAnimation {
+                        self.displayValue.toggle()
+                    }
             }
         }
     }

@@ -15,46 +15,53 @@ struct GlobalStatsView: View {
         let currentGlobalData = data.globalData.results.prefix(1)
         
         return ForEach(currentGlobalData, id: \.id) { global in
-            HStack {
-                VStack(alignment: .leading) {
-                    if global.totalCases != -1 {
-                        Text("\(global.totalCases)")
+            VStack {
+                SectionTitle(
+                    title: "Global Statistics",
+                    image: Image("globe"),
+                    backgroundColor: Color.backgroundLight
+                )
+                HStack {
+                    VStack(alignment: .leading) {
+                        if global.totalCases != -1 {
+                            Text("\(global.totalCases)")
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
+                                .scaledFont(size: 30)
+                        } else {
+                            Text("-")
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
+                                .scaledFont(size: 30)
+                        }
+                        
+                        Text("Confirmed Cases")
                             .fontWeight(.semibold)
-                            .foregroundColor(Color.white)
-                            .scaledFont(size: 30)
-                    } else {
-                        Text("-")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.white)
-                            .scaledFont(size: 30)
+                            .font(.headline)
+                            .foregroundColor(Color.secondaryText)
+                        
+                        if global.totalDeaths != -1 {
+                            Text("\(global.totalDeaths)")
+                                .fontWeight(.semibold)
+                                .foregroundColor(Color.white)
+                                .scaledFont(size: 30)
+                        } else {
+                            Text("-")
+                                .foregroundColor(Color.white)
+                                .fontWeight(.semibold)
+                                .scaledFont(size: 30)
+                        }
+                        
+                        Text("Deaths")
+                            .font(.headline)
+                            .foregroundColor(.secondaryText)
                     }
                     
-                    Text("Confirmed Cases")
-                        .fontWeight(.semibold)
-                        .font(.headline)
-                        .foregroundColor(Color.secondaryText)
+                    Spacer()
                     
-                    if global.totalDeaths != -1 {
-                        Text("\(global.totalDeaths)")
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color.white)
-                            .scaledFont(size: 30)
-                    } else {
-                        Text("-")
-                            .foregroundColor(Color.white)
-                            .fontWeight(.semibold)
-                            .scaledFont(size: 30)
-                    }
-                    
-                    Text("Deaths")
-                        .font(.headline)
-                        .foregroundColor(.secondaryText)
+                    PieChartView(data: [global.totalDeaths, global.totalRecovered, global.totalActive], titles: ["Death", "Recovered", "Active"])
+                        .frame(width: 100, height: 100)
                 }
-                
-                Spacer()
-                
-                PieChartView(data: [global.totalDeaths, global.totalRecovered, global.totalActive], titles: ["Death", "Recovered", "Active"])
-                    .frame(height: 100)
             }
         }
     }
