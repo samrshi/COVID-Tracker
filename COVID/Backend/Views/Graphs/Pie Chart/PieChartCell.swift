@@ -16,6 +16,8 @@ struct PieChartCell: View {
     var startDeg: Double
     var endDeg: Double
     
+    let color: Color
+    
     var path: Path {
         var path = Path()
         
@@ -28,12 +30,12 @@ struct PieChartCell: View {
     
     var body: some View {
         path
-            .stroke(Color(#colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)), lineWidth: 5)
+            .stroke(color, lineWidth: 5)
     }
 }
 
 struct PieChartCell_Previews: PreviewProvider {
     static var previews: some View {
-        PieChartCell(rect: CGRect(x: 0, y: 0, width: 10, height: 10), startDeg: 0, endDeg: 0)
+        PieChartCell(rect: CGRect(x: 0, y: 0, width: 10, height: 10), startDeg: 0, endDeg: 0, color: Color.red)
     }
 }

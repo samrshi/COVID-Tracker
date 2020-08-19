@@ -24,8 +24,7 @@ struct URLImage: View {
             return AnyView(
                 Image(uiImage: image)
                     .resizable()
-                    .scaledToFill()
-                    .frame(width: 75, height: 50, alignment: .center)
+                    .scaledToFit()
                     .clipped()
             )
         }

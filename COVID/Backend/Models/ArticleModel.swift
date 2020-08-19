@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Article: Codable {
+struct ArticleModel: Codable {
     let id = UUID()
     
     let source: Source

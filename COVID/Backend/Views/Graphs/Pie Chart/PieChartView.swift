@@ -19,7 +19,7 @@ struct PieSlice {
 
 struct PieChartView: View {
     let data: [Int]
-    //    let rect: CGRect
+    let titles: [String]
     
     var slices: [PieSlice] {
         var tempSlices: [PieSlice] = []
@@ -47,14 +47,14 @@ struct PieChartView: View {
                         self.displayValue.toggle()
                 }
                 
-                ForEach(self.slices, id: \.id) { slice in
-                    PieChartCell(rect: geometry.frame(in: .local), startDeg: slice.startDeg, endDeg: slice.endDeg)
+                ForEach(0 ..< self.slices.count, id: \.self) { index in
+                    PieChartCell(rect: geometry.frame(in: .local), startDeg: self.slices[index].startDeg, endDeg: self.slices[index].endDeg, color: Color.rgbArray[index])
                 }
                 
                 if self.displayValue {
                     VStack {
-                        ForEach(self.slices, id: \.id) { slice in
-                            Text("\(Int(slice.normalizedValue * 100))%")
+                        ForEach(0 ..< self.slices.count, id: \.self) { index in
+                            Text("\(self.titles[index]) \(Int(self.slices[index].normalizedValue * 100))%")
                         }
                     }
                 }
