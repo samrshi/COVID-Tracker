@@ -18,9 +18,6 @@ struct ContentView: View {
     @State private var alertTitle = ""
     @State private var alertMessage = ""
     
-=======
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
     var body: some View {
         TabView {
             HomeView()
@@ -67,7 +64,6 @@ struct ContentView: View {
                 self.showAlert = true
             }
         }
-=======
     }
 }
 
