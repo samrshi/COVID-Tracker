@@ -15,7 +15,7 @@ extension ArticleModel {
         let date = inputFormatter.date(from: self.publishedAt ?? "-") ?? Date()
         
         let outputFormatter = DateFormatter()
-        outputFormatter.dateFormat = "mm/dd/y hh:m a"
+        outputFormatter.dateFormat = "MM/dd/y hh:m a"
         let result = outputFormatter.string(from: date)
         
         return result

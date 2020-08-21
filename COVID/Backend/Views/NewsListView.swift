@@ -15,8 +15,8 @@ struct NewsListView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("COVID-19 Headlines")
-                .foregroundColor(.white)
+            Text("Top COVID-19 Headlines")
+                .foregroundColor(.primaryText)
                 .fontWeight(.bold)
                 .scaledFont(size: 20)
             
@@ -35,7 +35,7 @@ struct NewsListView: View {
                             Text(article.source.name ?? article.author ?? "-")
                                 .scaledFont(size: 10)
                         }
-                        .foregroundColor(.white)
+                        .foregroundColor(.primaryText)
                         
                         Spacer()
                     }

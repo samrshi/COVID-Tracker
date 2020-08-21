@@ -22,15 +22,13 @@ struct PieChartCell: View {
         var path = Path()
         
         path.addArc(center: rect.mid, radius: radius, startAngle: Angle(degrees: startDeg), endAngle: Angle(degrees: endDeg), clockwise: false)
-//        path.addLine(to: rect.mid)
-//        path.closeSubpath()
         
         return path
     }
     
     var body: some View {
         path
-            .stroke(color, lineWidth: 5)
+            .stroke(color, lineWidth: 7)
     }
 }
 

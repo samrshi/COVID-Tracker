@@ -29,7 +29,7 @@ struct URLImage: View {
             )
         }
         
-        return AnyView(placeholder.foregroundColor(.white))
+        return AnyView(placeholder.foregroundColor(.primaryText))
     }
 }
 

@@ -11,7 +11,7 @@ import SwiftUI
 struct IndicatorPoint: View {
     var body: some View {
         Circle()
-            .foregroundColor(.white)
+            .foregroundColor(.primaryText)
             .frame(width: 10, height: 10)
             .shadow(radius: 5)
     }

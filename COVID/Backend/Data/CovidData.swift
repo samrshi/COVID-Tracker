@@ -9,16 +9,18 @@
 import Foundation
 
 class CovidData: ObservableObject {
-    @Published var globalData: GlobalResults = emptyGlobalResults
+//    @Published var globalData: GlobalResults = emptyGlobalResults
+    @Published var globalData: GlobalModel = emptyGlobalModel
     @Published var countryData: CountryResults = emptyCountryResults
     
     init() {
-        let urlOne = "https://api.thevirustracker.com/free-api?global=stats"
+//        let globalDataURL = "https://api.thevirustracker.com/free-api?global=stats"
+        let globalDataURL = "https://corona.lmao.ninja/v2/all"
         
         let dispatchGroup = DispatchGroup()
         
         dispatchGroup.enter()
-        API.fetch(type: GlobalResults.self, urlString: urlOne, decodingStrategy: .convertFromSnakeCase) { result in
+        API.fetch(type: GlobalModel.self, urlString: globalDataURL, decodingStrategy: .useDefaultKeys) { result in
             switch result {
             case .success(let data):
                 self.globalData = data

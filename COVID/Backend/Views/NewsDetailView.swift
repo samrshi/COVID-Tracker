@@ -13,7 +13,7 @@ struct ArticleDetailView: View {
     
     var body: some View {
         ZStack {
-            Color.backgroundDark
+            Color.backgroundLight
                 .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geometry in
@@ -32,7 +32,7 @@ struct ArticleDetailView: View {
                             Text("By").foregroundColor(.gray)
                             
                             Text(self.article.author?.uppercased() ?? "-")
-                                .foregroundColor(.white)
+                                .foregroundColor(.primaryText)
                         }
                         Text("Published at \(self.article.formattedDate)")
                             .font(.caption)

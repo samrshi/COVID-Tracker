@@ -31,9 +31,9 @@ struct SectionTitle: View {
                     .fontWeight(.bold)
             }
             .scaledFont(size: 20)
-            .foregroundColor(.white)
+            .foregroundColor(.primaryText)
             .padding(.horizontal, 10)
-            .padding(.vertical, 7)
+            .padding(.vertical, 3)
             .background(backgroundColor)
             .clipShape(RoundedRectangle(cornerRadius: 15))
             
@@ -44,6 +44,6 @@ struct SectionTitle: View {
 
 struct SectionTitleView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionTitle(title: "Global Statistics", image: Image(systemName: "globe"), backgroundColor: Color.backgroundLight)
+        SectionTitle(title: "Global Statistics", image: Image(systemName: "globe"), backgroundColor: Color.backgroundDark)
     }
 }

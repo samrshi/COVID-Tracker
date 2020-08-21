@@ -16,6 +16,8 @@ struct ContentView: View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
+                    SymptomsCardView()
+                    
                     GlobalStatsView().environmentObject(covidData)
                         .padding(.bottom)
                     
@@ -36,8 +38,8 @@ struct ContentView: View {
         
         
         coloredNavAppearance.backgroundColor = backgroundDark
-        coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "primaryText")!]
+        coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "primaryText")!]
         coloredNavAppearance.shadowColor = .clear
         
         UINavigationBar.appearance().standardAppearance = coloredNavAppearance
