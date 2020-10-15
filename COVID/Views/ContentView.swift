@@ -11,13 +11,12 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var covidData = CovidData()
     @ObservedObject var newsData = NewsData()
+    @ObservedObject var newNews = NewNewsData()
     
     var body: some View {
         NavigationView {
             ScrollView(.vertical) {
                 VStack(alignment: .leading) {
-                    SymptomsCardView()
-                    
                     GlobalStatsView().environmentObject(covidData)
                         .padding(.bottom)
                     
@@ -25,6 +24,8 @@ struct ContentView: View {
                         .padding()
                         .background(Color.backgroundLight)
                         .cornerRadius(20)
+                    
+                    LineGraphView(title: "Example", data: [(date: "01", positive: 1), (date: "02", positive: 2), (date: "02", positive: 2), (date: "03", positive: 3)], colorScheme: .cool)
                 }
                 .padding(.horizontal)
             }
@@ -35,13 +36,12 @@ struct ContentView: View {
     init() {
         let coloredNavAppearance = UINavigationBarAppearance()
         let backgroundDark = UIColor(named: "backgroundDark")
-        
-        
+
         coloredNavAppearance.backgroundColor = backgroundDark
         coloredNavAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: "primaryText")!]
         coloredNavAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: "primaryText")!]
         coloredNavAppearance.shadowColor = .clear
-        
+
         UINavigationBar.appearance().standardAppearance = coloredNavAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = coloredNavAppearance
         UIScrollView.appearance().backgroundColor = backgroundDark

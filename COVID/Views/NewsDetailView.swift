@@ -13,7 +13,7 @@ struct ArticleDetailView: View {
     
     var body: some View {
         ZStack {
-            Color.backgroundLight
+            Color.backgroundDark
                 .edgesIgnoringSafeArea(.all)
             
             GeometryReader { geometry in
@@ -22,21 +22,23 @@ struct ArticleDetailView: View {
                         Text(self.article.title ?? "-")
                             .font(.system(Font.TextStyle.largeTitle, design: Font.Design.serif))
                             .fontWeight(.bold)
-                        .layoutPriority(1)
+                            .layoutPriority(1)
                         
                         URLImage(url: self.article.urlToImage ?? "google.com")
                             .frame(width: geometry.size.width)
                             .cornerRadius(10)
                         
                         HStack {
-                            Text("By").foregroundColor(.gray)
+                            Text("By")
+                                .foregroundColor(.secondaryText)
                             
                             Text(self.article.author?.uppercased() ?? "-")
                                 .foregroundColor(.primaryText)
                         }
+                        
                         Text("Published at \(self.article.formattedDate)")
                             .font(.caption)
-                            .foregroundColor(.gray)
+                            .foregroundColor(.secondaryText)
                             .padding(.bottom)
                         
                         Text(self.article.content ?? "-")

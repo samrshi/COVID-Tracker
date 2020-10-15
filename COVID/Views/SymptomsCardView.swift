@@ -26,9 +26,9 @@ struct SymptomsCardView: View {
                 .foregroundColor(.ternaryText)
             
             HStack {
-                Image(systemName: "pencil.circle.fill")
+                Image(systemName: "chart.bar.fill")
                     .scaledFont(size: 80)
-                    .offset(x: -30, y: 20)
+                    .offset(x: -30)
                 
                 Spacer()
                                 

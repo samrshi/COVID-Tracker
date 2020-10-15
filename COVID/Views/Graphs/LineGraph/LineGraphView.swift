@@ -36,7 +36,8 @@ struct LineGraphView: View {
         GeometryReader { geometry in
             ZStack {
                 Rectangle()
-                    .fill(Color("cardBackground"))
+                    .fill(Color.backgroundDark)
+                
                 VStack {
                     HStack {
                         if self.showingValue {
@@ -46,13 +47,13 @@ struct LineGraphView: View {
                             
                             Text(self.currentDate)
                                 .foregroundColor(Color(UIColor.secondaryLabel))
-                                .subTitle()
+//                                .subTitle()
                         } else {
                             Text(self.title)
                             Spacer()
                         }
                     }
-                    .title()
+//                    .title()
                     
                     Line(data: self.data.map({$0.positive}), showIndicator: self.showingValue, touchLocation: self.touchLocation, colors: self.colors)
                 }
@@ -70,7 +71,6 @@ struct LineGraphView: View {
                 }
             )
         }
-        .card()
         .padding(.horizontal, -10)
     }
     
@@ -110,11 +110,8 @@ struct LineGraphView: View {
     }
 }
 
-struct GraphView_Previews: PreviewProvider {
+struct LineGraphView2_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack {
-            Color("background")
-            LineGraphView(title: "Deaths", data: [(date: "20", positive: 1)], colorScheme: .cool)
-        }
+        LineGraphView(title: "Example", data: [(date: "01", positive: 1), (date: "02", positive: 2), (date: "02", positive: 2), (date: "03", positive: 3)], colorScheme: .cool)
     }
 }
